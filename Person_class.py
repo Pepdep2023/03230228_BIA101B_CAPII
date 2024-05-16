@@ -136,3 +136,31 @@ drv = Driver("karma", "Male", 40, "10705005263", 300)
 # Common interface for calculating tax (polymorphic principle)
 for person in [emp, tea, doc, drv]:
     print(f"{person.name}'s tax is {person.calculate_tax()}")
+
+
+
+# OOP (Personal Income Tax calculation)
+
+#1. Encapsulation:
+   #The Person class uses private attributes (_name, etc.) to protect data integrity.
+   #Getter and setter methods (name, gender, etc.) control access to these attributes.
+
+#2. Inheritance:
+   #Employee, Teacher, Doctor, and Driver inherit attributes and the income method from the Person class.
+
+#3. Abstraction:
+   #The abstract income method in Person defines functionality that all subclasses must implement (calculate their specific income). 
+
+#4. Polymorphism:
+   #The calculate_tax method in Person works for all subclasses even though the income method is implemented differently in each. This allows for a common interface to calculate tax regardless of the taxpayer type (Employee, Teacher, etc.).
+   
+
+#Summary of how each principle is implemented:
+
+#1. Encapsulation: By using private attributes and getter/setter methods, the code ensures that data within the class is only modified through controlled methods. This prevents accidental modification and maintains data consistency.
+
+#2. Inheritance: Subclasses inherit the common attributes (name, gender, age, cid) and the core functionality (income method) from the Person class. This promotes code reusability and reduces redundancy.
+
+#3. Abstraction: The abstract income method in Person defines the concept of income calculation but doesn't provide the implementation. Subclasses (Employee, Teacher, etc.) must implement their specific income calculation logic. This separates the core concept from the specific details.
+
+#4. Polymorphism: The calculate_tax method in Person uses the income method to calculate tax. Even though each subclass implements income differently, the calculate_tax method can work with all of them because it treats them as instances of the Person class. This allows for flexible and dynamic behavior based on the actual taxpayer type.
