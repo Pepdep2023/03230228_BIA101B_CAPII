@@ -164,3 +164,15 @@ for person in [emp, tea, doc, drv]:
 #3. Abstraction: The abstract income method in Person defines the concept of income calculation but doesn't provide the implementation. Subclasses (Employee, Teacher, etc.) must implement their specific income calculation logic. This separates the core concept from the specific details.
 
 #4. Polymorphism: The calculate_tax method in Person uses the income method to calculate tax. Even though each subclass implements income differently, the calculate_tax method can work with all of them because it treats them as instances of the Person class. This allows for flexible and dynamic behavior based on the actual taxpayer type.
+
+
+##References##
+# Department of Revenue and Customs.(n.d).Personal Income Tax(PIT).Retrieved from: portal/drc/node/25
+# Analytic Vidyha.(2023).Basic Object Oriented programming(OOPs)Concepts in Python.Retriveed from https://www.analyticsvidhya.com/blog/2020/09/object-oriented-programming/#:~:text=There%20are%20four%20fundamental%20concepts,in%20order%20to%20understand%20OOPs.
+# GEEKSFORGEEKS.(n.d).Python OOPs Concepts.Retrieved from:https://www.geeksforgeeks.org/python-oops-concepts/amp/
+
+
+
+
+
+
