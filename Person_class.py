@@ -7,6 +7,8 @@ class Person:
         self.age = age
         self.cid = cid
 
+# Getter and setter methods for encapsulation being used 
+
 
 #Abstraction method to be implemented by subclasses
     def income(self):
@@ -46,7 +48,7 @@ class Teacher(Person):
         return self.monthly_salary * 12 #Annual salary assumpt
     
 class Doctor(Person):
-    def __init__(self,name,gender,age,cid,yearly__fee):
+    def __init__(self,name,gender,age,cid,yearly_fee):
         super().__init__(name,gender,age,cid)
         self.yearly_fee = yearly_fee
 
@@ -62,10 +64,12 @@ class Driver(Person):
         return self.daily_rate
     
 
+# Create instances of different classes
+emp = Employee("Mindu", "Male", 35, "10704009876", 50000)
+tea = Teacher("Jetshen", "Female", 28, "10706003322", 60000)
+doc = Doctor("Dr. Loday", "Male", 45, "10286776556", 80000)
+drv = Driver("karma", "Male", 40, "10705005263", 200)
 
-
-
-
-
-
-
+# Common interface for calculating tax(polymorphic method)
+for person in [emp, tea, doc, drv]:
+    print(f"{person.name}'s tax is {person.calculate_tax()}")
